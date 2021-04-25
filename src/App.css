@@ -57,3 +57,11 @@ p {
   border: 10px;
   padding: 10px;
 }
+
+.wrapper {
+  border: black solid 1px;
+  margin: 1%;
+  padding: 1%;
+  width: 50%;
+
+}

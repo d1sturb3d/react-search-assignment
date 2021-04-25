@@ -10,7 +10,7 @@ const [SearchTerm, setSearchTerm] = useState('')
   return (
     <div className="App">
       {/* <input type="text" placeholder="Search Country" onChange={event => {setSearchTerm(event.target.value)}}/> */}
-        <TextField className = "form" id="outlined-basic" label="Outlined" variant="outlined" placeholder="Search Country" onChange={event => {setSearchTerm(event.target.value)}}/>
+        <TextField className = "form" id="outlined-basic" label="Country Name" variant="outlined" placeholder="Search Country" onChange={event => {setSearchTerm(event.target.value)}}/>
       {JSONDATA.filter((val) => {
         if (SearchTerm === ""){
           return val
@@ -20,9 +20,11 @@ const [SearchTerm, setSearchTerm] = useState('')
         }
       }).map((val,key) => {
         return (
+			<div className="wrapper">
             <div className="country" key={key}>
             	<p>{val.country}'s capital is {val.city}</p>
             </div>
+			</div>
           )
       })}
     </div>
